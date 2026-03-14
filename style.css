@@ -45,6 +45,36 @@ section:nth-of-type(even){background:#0a0a0a;}
 /* contact */
 #contact a{color:#38bdf8;}
 
+#contact .contact-header{max-width:700px;margin:0 auto 40px;text-align:center;}
+#contact .contact-header h2{font-size:2.6rem;margin-bottom:10px;}
+#contact .contact-header p{color:#bbb;font-size:1.05rem;}
+
+#contact .contact-container{display:grid;grid-template-columns:1fr 2fr 1fr;gap:30px;max-width:1200px;margin:0 auto;}
+#contact .contact-info, #contact .contact-form-section, #contact .social-links{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:24px;padding:30px;box-shadow:0 12px 30px rgba(0,0,0,0.45);backdrop-filter:blur(12px);}
+#contact .contact-info h3, #contact .contact-form-section h3, #contact .social-links h3{margin-bottom:20px;text-align:center;}
+
+#contact .info-item{display:flex;align-items:center;gap:15px;margin-bottom:15px;color:#ddd;}
+#contact .info-item i{color:#38bdf8;font-size:1.2rem;}
+
+#contact .form-row{display:flex;gap:15px;margin-bottom:16px;}
+#contact .form-row input{flex:1;}
+#contact .contact-form input,
+#contact .contact-form textarea{width:100%;padding:14px 16px;margin-bottom:16px;border-radius:18px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);color:#fff;outline:none;}
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus{border-color:#38bdf8;box-shadow:0 0 0 3px rgba(56,189,248,0.22);}
+#contact .contact-form textarea{resize:none;}
+#contact .contact-form .btn{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:10px;}
+
+#contact .social-links{text-align:center;}
+#contact .social-icons{display:flex;justify-content:center;gap:18px;margin-top:20px;}
+#contact .social-icons a{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:16px;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.35);color:#38bdf8;font-size:1.4rem;transition:transform .25s,background .25s;}
+#contact .social-icons a:hover{transform:translateY(-4px);background:rgba(56,189,248,0.2);}
+
+@media(max-width:768px){
+  #contact .contact-container{grid-template-columns:1fr;gap:20px;}
+  #contact .form-row{flex-direction:column;}
+}
+
 /* footer */
 footer{text-align:center;padding:20px;background:#000;}
 
