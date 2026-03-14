@@ -1,252 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Developer Portfolio</title>
+  <title>M Siva Abhiram Reddy | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of M Siva Abhiram Reddy – Cloud & DevOps enthusiast and Computer Science student at LPU.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <!-- google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- fontawesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papI6FMiPkViX7xFaydG0q3oPzlV9yyaQfTzlLiGwj0F3k9nJtWlwzam4m0sCmKQ1fz8zGkLyn9efg6oPMoqBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-  <header>
-    <h2 class="logo">Siva Abhiram Reddy Medapati</h2>
-    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#achievements">Achievements</a>
-      <!-- <a href="#experience">Experience</a> -->
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">SAR</a>
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#training" class="nav-link">Training</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#home" class="mob-link">Home</a>
+      <a href="#about" class="mob-link">About</a>
+      <a href="#skills" class="mob-link">Skills</a>
+      <a href="#projects" class="mob-link">Projects</a>
+      <a href="#education" class="mob-link">Education</a>
+      <a href="#training" class="mob-link">Training</a>
+      <a href="#certifications" class="mob-link">Certifications</a>
+      <a href="#contact" class="mob-link">Contact</a>
+    </div>
   </header>
 
+  <!-- ===== HERO ===== -->
   <section id="home" class="hero">
-    <div class="hero-text">
-      <!-- replace profile.jpg with your photo -->
-      <img src="images/profile.jpg" alt="Profile" class="profile-photo">
-      <h1>Hi, I'm <span>Siva Abhiram Reddy Medapati</span></h1>
-      <p class="subtitle">Aspiring Cloud Engineer</p>
-      <p class="typing"></p>
-      <div class="hero-social">
-        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:you@example.com"><i class="fas fa-envelope"></i></a>
+    <div class="hero-inner">
+      <!-- Left: text -->
+      <div class="hero-text">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Siva Abhiram<br><span class="accent">Reddy</span></h1>
+        <p class="hero-role">
+          <span id="typed"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-bio">
+          Computer Science student at Lovely Professional University passionate about
+          Cloud Computing, DevOps automation, and building scalable solutions.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Get In Touch</a>
+          <a href="#projects" class="btn-outline">View Projects</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/sivaabhiramreddy" target="_blank" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/sivaabhiram" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:msabhiramreddy11@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+916302417826" aria-label="Phone"><i class="fas fa-phone"></i></a>
+        </div>
       </div>
-      <a href="resume.pdf" class="btn" download>Download Resume</a>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <p>Hello! I'm M Siva Abhiram Reddy, a B.Tech student at Lovely Professional University with a 
-        strong interest in software development and technology. I enjoy building web applications and 
-        learning new tools that help solve real-world problems. My current focus is on backend development
-         with Python and Django, while also exploring cloud technologies and modern web development. 
-         My goal is to continuously improve my skills and grow into a professional software developer 
-         who can contribute to building useful and impactful applications.
-</p>
-      <!-- optional about image -->
-      <img src="images/about.jpg" alt="About image">
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <!-- animated skill cards -->
-      <div class="card"><i class="fab fa-python"></i><span>Python</span></div>
-      <div class="card"><i class="fab fa-js"></i><span>JavaScript</span></div>
-      <div class="card"><i class="fab fa-html5"></i><span>HTML</span></div>
-      <div class="card"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-      <div class="card"><i class="fab fa-aws"></i><span>AWS</span></div>
-      <div class="card"><i class="fab fa-docker"></i><span>Docker</span></div>
-      <div class="card"><i class="fab fa-linux"></i><span>Linux</span></div>
-      <div class="card"><i class="fab fa-git-alt"></i><span>Git</span></div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <!-- project1 -->
-      <div class="project">
-        <img src="images/project1.png" alt="Project 1">
-        <h3>Project Title</h3>
-        <p>Short description of project.</p>
-        <a href="#" target="_blank">GitHub</a>
+      <!-- Right: photo -->
+      <div class="hero-photo">
+        <div class="photo-wrap">
+          <img src="images/profile.jpg" alt="Siva Abhiram Reddy">
+        </div>
       </div>
-      <!-- repeat project blocks as needed -->
     </div>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-list">
-      <article>
-        <h3>University Name</h3>
-        <p>Degree, Years attended</p>
-      </article>
-      <!-- more education items -->
-    </div>
-  </section>
-
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="cert-grid">
-      <div class="cert">
-        <img src="images/certificate1.png" alt="Certificate 1">
-        <span>Certificate Title</span>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="sec-title">About <span class="accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="images/profile.jpg" alt="About Siva Abhiram">
+          <div class="about-badge">Open to Opportunities</div>
+        </div>
+        <div class="about-content">
+          <h3>Hello! I'm <span class="accent">M Siva Abhiram Reddy</span></h3>
+          <p>
+            I am a B.Tech Computer Science and Engineering student at <strong>Lovely Professional University</strong>,
+            Phagwara, Punjab with a CGPA of <strong>7.75</strong>. I am passionate about cloud technologies,
+            DevOps practices, and building efficient software solutions.
+          </p>
+          <p>
+            My current focus is on <strong>Cloud Computing</strong> and <strong>DevOps automation</strong> —
+            containerization with Docker, CI/CD pipelines with GitHub Actions, and deploying reliable infrastructure on
+            AWS.
+          </p>
+          <div class="about-info">
+            <div class="info-item"><i class="fas fa-envelope"></i><span>msabhiramreddy11@gmail.com</span></div>
+            <div class="info-item"><i class="fas fa-phone"></i><span>+91 6302417826</span></div>
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Phagwara, Punjab</span></div>
+            <div class="info-item"><i class="fab fa-github"></i><span>github.com/sivaabhiramreddy</span></div>
+          </div>
+          <a href="resume.pdf" download class="btn-primary">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
       </div>
-      <!-- repeat for more certificates -->
     </div>
   </section>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Achievement one</li>
-      <li>Achievement two</li>
-      <!-- add more list items -->
-    </ul>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <h2 class="sec-title">My <span class="accent">Skills</span></h2>
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-code"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fab fa-python"></i> Python</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><span class="skill-icon-c">C</span> C Programming</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fab fa-html5"></i> HTML</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fab fa-css3-alt"></i> CSS</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fab fa-aws"></i> AWS (EC2, S3)</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fab fa-docker"></i> Docker</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:72%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fab fa-linux"></i> Linux</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-tools"></i>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fas fa-code"></i> VS Code</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fas fa-fire"></i> PyCharm</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><i class="fab fa-github"></i> GitHub Actions</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:68%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-brain"></i>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="soft-list">
+            <span class="soft-pill"><i class="fas fa-check-circle"></i> Adaptability</span>
+            <span class="soft-pill"><i class="fas fa-check-circle"></i> Analytical Thinking</span>
+            <span class="soft-pill"><i class="fas fa-check-circle"></i> Time Management</span>
+            <span class="soft-pill"><i class="fas fa-check-circle"></i> Problem Solving</span>
+            <span class="soft-pill"><i class="fas fa-check-circle"></i> Team Collaboration</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <!-- <section id="experience">
-    <h2>Internship / Experience</h2>
-    <div class="experience-list">
-      <article>
-        <h3>Role / Company</h3>
-        <p>Brief description of responsibilities and technologies.</p>
-      </article>
-       more experience entries -->
-    <!-- </div>
-  </section> --> 
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="sec-title">My <span class="accent">Projects</span></h2>
+      <div class="projects-grid">
 
-  
+        <div class="project-card">
+          <div class="proj-top">
+            <span class="proj-cat">DevOps</span>
+            <span class="proj-date">February 2026</span>
+          </div>
+          <h3>Portfolio DevOps CI/CD Pipeline</h3>
+          <p>
+            Containerized portfolio application using Docker with automated GitHub Actions
+            CI/CD pipeline. Implements version control, containerization, and continuous
+            integration workflows with auto-build on every code push.
+          </p>
+          <div class="proj-tags">
+            <span>Docker</span><span>GitHub Actions</span><span>CI/CD</span>
+          </div>
+          <a href="https://github.com/sivaabhiramreddy" target="_blank" class="proj-link">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
 
-  <section id="contact">
+        <div class="project-card">
+          <div class="proj-top">
+            <span class="proj-cat">Cloud</span>
+            <span class="proj-date">November 2025</span>
+          </div>
+          <h3>AWS Cloud Website Deployment</h3>
+          <p>
+            Deployed a static website on Amazon EC2 and S3 with secure infrastructure
+            configuration. Implemented security groups and demonstrated practical understanding
+            of cloud deployment processes and infrastructure fundamentals.
+          </p>
+          <div class="proj-tags">
+            <span>AWS EC2</span><span>S3</span><span>Cloud</span>
+          </div>
+          <a href="#" class="proj-link">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
 
-<div class="contact-header">
-<h2>Let's Connect</h2>
-<p>I'm always open to discussing new opportunities and collaborations</p>
-</div>
+        <div class="project-card">
+          <div class="proj-top">
+            <span class="proj-cat">Python</span>
+            <span class="proj-date">November 2025</span>
+          </div>
+          <h3>Snake Game</h3>
+          <p>
+            Interactive Snake Game using Python and Turtle Graphics with OOP design —
+            separate classes for snake movement, food spawning, and score tracking.
+            Full collision detection and event-driven programming.
+          </p>
+          <div class="proj-tags">
+            <span>Python</span><span>OOP</span><span>Turtle Graphics</span>
+          </div>
+          <a href="https://github.com/sivaabhiramreddy/SNAKE-GAME" target="_blank" class="proj-link">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
 
-<div class="contact-container">
+      </div>
+    </div>
+  </section>
 
-<!-- Contact Information -->
-<div class="contact-info">
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section section-dark">
+    <div class="container">
+      <h2 class="sec-title"><i class="fas fa-graduation-cap accent"></i> Education</h2>
+      <div class="timeline timeline-wide">
 
-<h3>Contact Information</h3>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Aug 2023 – Present</span>
+            <h4>B.Tech – Computer Science & Engineering</h4>
+            <p class="tl-place">Lovely Professional University</p>
+            <p class="tl-loc"><i class="fas fa-map-pin"></i> Phagwara, Punjab</p>
+            <span class="tl-score">CGPA: 7.75</span>
+          </div>
+        </div>
 
-<div class="info-item">
-<i class="fas fa-envelope"></i>
-<span>abhiramreddy63024@gmail.com</span>
-</div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Mar 2021 – May 2023</span>
+            <h4>Intermediate – PCM</h4>
+            <p class="tl-place">Sri Chaitanya Junior College</p>
+            <p class="tl-loc"><i class="fas fa-map-pin"></i> Anakapalle, Andhra Pradesh</p>
+            <span class="tl-score">95%</span>
+          </div>
+        </div>
 
-<div class="info-item">
-<i class="fas fa-phone"></i>
-<span>+91 9876543210</span>
-</div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Mar 2020 – May 2021</span>
+            <h4>Matriculation – Class X</h4>
+            <p class="tl-place">Bhashyam EM High School</p>
+            <p class="tl-loc"><i class="fas fa-map-pin"></i> Anakapalle, Andhra Pradesh</p>
+            <span class="tl-score">99%</span>
+          </div>
+        </div>
 
-<div class="info-item">
-<i class="fas fa-map-marker-alt"></i>
-<span>India</span>
-</div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- ===== TRAINING ===== -->
+  <section id="training" class="section">
+    <div class="container">
+      <h2 class="sec-title"><i class="fas fa-chalkboard-teacher accent"></i> Training</h2>
+      <div class="timeline timeline-wide">
 
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-green"></div>
+          <div class="tl-card">
+            <span class="tl-date">Jun 2025 – Jul 2025</span>
+            <h4>Linux Fundamentals</h4>
+            <p class="tl-place">LPU SkillDevelopment</p>
+            <p class="tl-desc">Built and managed a Linux-based system by performing essential command-line operations
+              and file system navigation. Configured users, groups, and file permissions to improve system security.
+              Automated routine system tasks using Bash scripting.</p>
+          </div>
+        </div>
 
-<!-- Contact Form -->
-<div class="contact-form-section">
+      </div>
+    </div>
+  </section>
 
-<h3>Send Me a Message</h3>
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" class="section section-dark">
+    <div class="container">
+      <h2 class="sec-title"><i class="fas fa-award accent"></i> Certifications</h2>
+      <div class="certs-grid">
 
-<form class="contact-form"
-action="https://formsubmit.co/abhiramreddy63024@gmail.com"
-method="POST">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fab fa-aws"></i></div>
+          <div class="cert-info">
+            <h4>Amazon Web Services</h4>
+            <p class="tl-place">AWS Academy</p>
+            <span class="tl-date">January 2026</span>
+          </div>
+          <a href="images/certificate1.jpg" target="_blank" class="cert-view-btn">View <i
+              class="fas fa-external-link-alt"></i></a>
+        </div>
 
-<!-- IMPORTANT SETTINGS -->
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
+        <div class="cert-card">
+          <div class="cert-icon cert-icon-blue"><i class="fas fa-cloud"></i></div>
+          <div class="cert-info">
+            <h4>Cloud Computing</h4>
+            <p class="tl-place">NPTEL</p>
+            <span class="tl-date">November 2025</span>
+          </div>
+          <a href="images/certificate2.jpg" target="_blank" class="cert-view-btn">View <i
+              class="fas fa-external-link-alt"></i></a>
+        </div>
 
-<div class="form-row">
+        <div class="cert-card">
+          <div class="cert-icon cert-icon-green"><i class="fas fa-code"></i></div>
+          <div class="cert-info">
+            <h4>C Programming</h4>
+            <p class="tl-place">NeoColab</p>
+            <span class="tl-date">May 2024</span>
+          </div>
+        </div>
 
-<input type="text"
-name="name"
-placeholder="Your Name"
-required>
+      </div>
+    </div>
+  </section>
 
-<input type="email"
-name="email"
-placeholder="Your Email"
-required>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="sec-title">Get In <span class="accent">Touch</span></h2>
+      <p class="contact-sub">Have a project idea or opportunity? Feel free to reach out!</p>
+      <div class="contact-layout">
 
-</div>
+        <!-- Left: contact cards -->
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <p class="cc-label">Email</p>
+              <a href="mailto:msabhiramreddy11@gmail.com">msabhiramreddy11@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <p class="cc-label">Phone</p>
+              <a href="tel:+916302417826">+91 6302417826</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <p class="cc-label">LinkedIn</p>
+              <a href="https://linkedin.com/in/sivaabhiram" target="_blank">linkedin.com/in/sivaabhiram/</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <p class="cc-label">GitHub</p>
+              <a href="https://github.com/sivaabhiramreddy" target="_blank">github.com/sivaabhiramreddy</a>
+            </div>
+          </div>
+        </div>
 
-<input type="text"
-name="subject"
-placeholder="Subject"
-required>
+        <!-- Right: form -->
+        <form class="contact-form" action="https://formsubmit.co/msabhiramreddy11@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="john@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="Project Discussion">
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
 
-<textarea
-name="message"
-placeholder="Your Message"
-rows="6"
-required></textarea>
+      </div>
+    </div>
+  </section>
 
-<button class="btn" type="submit">
-<i class="fas fa-paper-plane"></i> Send Message
-</button>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 <strong>M Siva Abhiram Reddy</strong> · Built with ❤️</p>
+      <div class="footer-links">
+        <a href="https://github.com/sivaabhiramreddy" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/sivaabhiram" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:msabhiramreddy11@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
 
-</form>
-
-</div>
-
-
-<!-- Social Links -->
-<div class="social-links">
-
-<h3>Follow Me</h3>
-
-<div class="social-icons">
-
-<a href="https://github.com/YOUR_GITHUB" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
-<i class="fab fa-linkedin-in"></i>
-</a>
-
-<a href="#">
-<i class="fab fa-twitter"></i>
-</a>
-
-<a href="#">
-<i class="fab fa-instagram"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-  <a href="#home" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+  <!-- Back to top -->
+  <a href="#home" class="back-top" id="backTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
 
   <script src="script.js"></script>
-
-   <footer>
-    <p>© 2026 Your Name. All rights reserved.</p>
-  </footer>
 </body>
+
 </html>
