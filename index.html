@@ -23,9 +23,9 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#education" class="nav-link">Education</a>
         <a href="#training" class="nav-link">Training</a>
         <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#education" class="nav-link">Education</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -38,9 +38,9 @@
       <a href="#about" class="mob-link">About</a>
       <a href="#skills" class="mob-link">Skills</a>
       <a href="#projects" class="mob-link">Projects</a>
-      <a href="#education" class="mob-link">Education</a>
       <a href="#training" class="mob-link">Training</a>
       <a href="#certifications" class="mob-link">Certifications</a>
+      <a href="#education" class="mob-link">Education</a>
       <a href="#contact" class="mob-link">Contact</a>
     </div>
   </header>
@@ -62,6 +62,9 @@
         <div class="hero-btns">
           <a href="#contact" class="btn-primary">Get In Touch</a>
           <a href="#projects" class="btn-outline">View Projects</a>
+          <a href="resume.pdf" download class="btn-outline">
+            <i class="fas fa-download"></i> Download CV
+          </a>
         </div>
         <div class="hero-socials">
           <a href="https://github.com/sivaabhiramreddy" target="_blank" aria-label="GitHub"><i
@@ -85,32 +88,21 @@
   <section id="about" class="section">
     <div class="container">
       <h2 class="sec-title">About <span class="accent">Me</span></h2>
-      <div class="about-grid">
-        <div class="about-img-wrap">
-          <img src="images/profile.jpg" alt="About Siva Abhiram">
-          <div class="about-badge">Open to Opportunities</div>
-        </div>
-        <div class="about-content">
-          <h3>Hello! I'm <span class="accent">M Siva Abhiram Reddy</span></h3>
-          <p>
-            I am a B.Tech Computer Science and Engineering student at <strong>Lovely Professional University</strong>,
-            Phagwara, Punjab with a CGPA of <strong>7.75</strong>. I am passionate about cloud technologies,
-            DevOps practices, and building efficient software solutions.
-          </p>
-          <p>
-            My current focus is on <strong>Cloud Computing</strong> and <strong>DevOps automation</strong> —
-            containerization with Docker, CI/CD pipelines with GitHub Actions, and deploying reliable infrastructure on
-            AWS.
-          </p>
-          <div class="about-info">
-            <div class="info-item"><i class="fas fa-envelope"></i><span>msabhiramreddy11@gmail.com</span></div>
-            <div class="info-item"><i class="fas fa-phone"></i><span>+91 6302417826</span></div>
-            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Phagwara, Punjab</span></div>
-            <div class="info-item"><i class="fab fa-github"></i><span>github.com/sivaabhiramreddy</span></div>
-          </div>
-          <a href="resume.pdf" download class="btn-primary">
-            <i class="fas fa-download"></i> Download CV
-          </a>
+      <div class="about-content about-content-centered">
+        <h3>Hello! I'm <span class="accent">M Siva Abhiram Reddy</span></h3>
+        <p>Hello! I'm M Siva Abhiram Reddy, a passionate Software Developer and Computer Science student at Lovely
+          Professional University (LPU). I enjoy building modern web applications and solving real-world problems
+          through technology.</p>
+        <p>I have experience working with Python, Django, and cloud technologies like AWS. I am particularly interested
+          in backend development, cloud computing, and scalable web applications.</p>
+        <p>Currently, I am improving my Data Structures &amp; Algorithms skills while also building practical projects
+          such
+          as web applications, cloud-based systems, and full-stack platforms. I enjoy learning new technologies and
+          continuously improving my development skills.</p>
+        <p>My goal is to become a skilled software engineer who can build efficient, scalable, and impactful digital
+          solutions.</p>
+        <div class="about-info">
+          <!-- <div class="info-item"><i class="fas fa-envelope"></i><span>msabhiramreddy11@gmail.com</span></div> -->
         </div>
       </div>
     </div>
@@ -244,6 +236,10 @@
       <div class="projects-grid">
 
         <div class="project-card">
+          <div class="proj-img-wrap">
+            <img src="images/project1.jpg" alt="Portfolio DevOps CI/CD Pipeline" class="proj-img"
+              onerror="this.parentElement.classList.add('proj-img-placeholder')">
+          </div>
           <div class="proj-top">
             <span class="proj-cat">DevOps</span>
             <span class="proj-date">February 2026</span>
@@ -263,6 +259,10 @@
         </div>
 
         <div class="project-card">
+          <div class="proj-img-wrap">
+            <img src="images/project2.jpg" alt="AWS Cloud Website Deployment" class="proj-img"
+              onerror="this.parentElement.classList.add('proj-img-placeholder')">
+          </div>
           <div class="proj-top">
             <span class="proj-cat">Cloud</span>
             <span class="proj-date">November 2025</span>
@@ -282,6 +282,10 @@
         </div>
 
         <div class="project-card">
+          <div class="proj-img-wrap">
+            <img src="images/project3.jpg" alt="Snake Game" class="proj-img"
+              onerror="this.parentElement.classList.add('proj-img-placeholder')">
+          </div>
           <div class="proj-top">
             <span class="proj-cat">Python</span>
             <span class="proj-date">November 2025</span>
@@ -304,51 +308,8 @@
     </div>
   </section>
 
-  <!-- ===== EDUCATION ===== -->
-  <section id="education" class="section section-dark">
-    <div class="container">
-      <h2 class="sec-title"><i class="fas fa-graduation-cap accent"></i> Education</h2>
-      <div class="timeline timeline-wide">
-
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <span class="tl-date">Aug 2023 – Present</span>
-            <h4>B.Tech – Computer Science & Engineering</h4>
-            <p class="tl-place">Lovely Professional University</p>
-            <p class="tl-loc"><i class="fas fa-map-pin"></i> Phagwara, Punjab</p>
-            <span class="tl-score">CGPA: 7.75</span>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <span class="tl-date">Mar 2021 – May 2023</span>
-            <h4>Intermediate – PCM</h4>
-            <p class="tl-place">Sri Chaitanya Junior College</p>
-            <p class="tl-loc"><i class="fas fa-map-pin"></i> Anakapalle, Andhra Pradesh</p>
-            <span class="tl-score">95%</span>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <span class="tl-date">Mar 2020 – May 2021</span>
-            <h4>Matriculation – Class X</h4>
-            <p class="tl-place">Bhashyam EM High School</p>
-            <p class="tl-loc"><i class="fas fa-map-pin"></i> Anakapalle, Andhra Pradesh</p>
-            <span class="tl-score">99%</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ===== TRAINING ===== -->
-  <section id="training" class="section">
+  <section id="training" class="section section-dark">
     <div class="container">
       <h2 class="sec-title"><i class="fas fa-chalkboard-teacher accent"></i> Training</h2>
       <div class="timeline timeline-wide">
@@ -362,6 +323,9 @@
             <p class="tl-desc">Built and managed a Linux-based system by performing essential command-line operations
               and file system navigation. Configured users, groups, and file permissions to improve system security.
               Automated routine system tasks using Bash scripting.</p>
+            <a href="images/training_certificate.jpg" target="_blank" class="cert-view-btn"
+              style="margin-top:0.75rem;display:inline-flex;">View Certificate <i class="fas fa-external-link-alt"
+                style="margin-left:0.4rem;"></i></a>
           </div>
         </div>
 
@@ -370,7 +334,7 @@
   </section>
 
   <!-- ===== CERTIFICATIONS ===== -->
-  <section id="certifications" class="section section-dark">
+  <section id="certifications" class="section">
     <div class="container">
       <h2 class="sec-title"><i class="fas fa-award accent"></i> Certifications</h2>
       <div class="certs-grid">
@@ -403,6 +367,51 @@
             <h4>C Programming</h4>
             <p class="tl-place">NeoColab</p>
             <span class="tl-date">May 2024</span>
+          </div>
+          <a href="images/certificate3.jpg" target="_blank" class="cert-view-btn">View <i
+              class="fas fa-external-link-alt"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section section-dark">
+    <div class="container">
+      <h2 class="sec-title"><i class="fas fa-graduation-cap accent"></i> Education</h2>
+      <div class="timeline timeline-wide">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Aug 2023 – Present</span>
+            <h4>B.Tech – Computer Science &amp; Engineering</h4>
+            <p class="tl-place">Lovely Professional University</p>
+            <p class="tl-loc"><i class="fas fa-map-pin"></i> Phagwara, Punjab</p>
+            <span class="tl-score">CGPA: 7.75</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Mar 2021 – May 2023</span>
+            <h4>Intermediate – PCM</h4>
+            <p class="tl-place">Sri Chaitanya Junior College</p>
+            <p class="tl-loc"><i class="fas fa-map-pin"></i> Anakapalle, Andhra Pradesh</p>
+            <span class="tl-score">95%</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Mar 2020 – May 2021</span>
+            <h4>Matriculation – Class X</h4>
+            <p class="tl-place">Bhashyam EM High School</p>
+            <p class="tl-loc"><i class="fas fa-map-pin"></i> Anakapalle, Andhra Pradesh</p>
+            <span class="tl-score">99%</span>
           </div>
         </div>
 
