@@ -744,6 +744,17 @@ button {
   padding-bottom: 1.5rem;
 }
 
+.tl-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  /* 🔥 prevents cropping */
+  background: #000;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+
 .tl-dot {
   position: absolute;
   left: -1.5rem;
@@ -763,14 +774,16 @@ button {
 
 .tl-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.1rem 1.25rem;
-  transition: border-color var(--trans);
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  transition: transform var(--trans), border-color var(--trans);
 }
 
+
 .tl-card:hover {
-  border-color: rgba(249, 115, 22, 0.3);
+  transform: translateY(-5px);
+  border-color: rgba(34, 197, 94, 0.4);
 }
 
 .tl-date {
@@ -835,6 +848,24 @@ button {
 .cert-link:hover {
   opacity: 0.75;
 }
+
+
+.cert-view-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.8rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  transition: all var(--trans);
+}
+
+.cert-view-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 
 /* =============================================
    CONTACT
@@ -1068,40 +1099,62 @@ button {
 }
 
 /* =============================================
-   CERTIFICATIONS GRID
+   CERTIFICATIONS GRID (FIXED)
    ============================================= */
+
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
+/* CARD */
 .cert-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.5rem;
+  overflow: hidden;
+  /* important for image */
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  flex-direction: column;
+  /* 🔥 FIX: vertical layout */
   transition: border-color var(--trans), transform var(--trans);
-  position: relative;
 }
 
 .cert-card:hover {
   border-color: rgba(249, 115, 22, 0.4);
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
+/* IMAGE */
+.cert-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  /* 🔥 FIX: no cropping */
+  background: #000;
+  /* optional */
+  padding: 10px;
+}
+
+/* CONTENT AREA */
+.cert-content {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ICON */
 .cert-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
   background: var(--accent-glow);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--accent);
   flex-shrink: 0;
 }
@@ -1116,6 +1169,7 @@ button {
   color: #22c55e;
 }
 
+/* TEXT */
 .cert-info {
   flex: 1;
 }
@@ -1123,21 +1177,18 @@ button {
 .cert-info h4 {
   font-size: 0.95rem;
   font-weight: 700;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
 }
 
+/* BUTTON */
 .cert-view-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.78rem;
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent);
-  border: 1.5px solid var(--accent);
-  padding: 0.35rem 0.75rem;
-  border-radius: 6px;
-  white-space: nowrap;
-  flex-shrink: 0;
+  border-top: 1px solid var(--border);
+  padding: 0.6rem;
   transition: all var(--trans);
 }
 
@@ -1146,81 +1197,22 @@ button {
   color: #fff;
 }
 
-/* Section title icon spacing */
+/* Section title icon */
 .sec-title i {
   margin-right: 0.4rem;
   font-size: 1.7rem;
   vertical-align: middle;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .certs-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-inner {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .photo-wrap {
-    width: 220px;
-    height: 220px;
-  }
-
-  .hero-btns,
-  .hero-socials {
-    justify-content: center;
-  }
-
-  .hero-bio {
-    margin: 0 auto 1.8rem;
-  }
-
-  .about-info {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
   }
 }
 
 @media (max-width: 600px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
   .certs-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-name {
-    font-size: 2rem;
   }
 }
