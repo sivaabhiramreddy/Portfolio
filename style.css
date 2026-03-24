@@ -1215,6 +1215,10 @@ button {
   .certs-grid {
     grid-template-columns: 1fr;
   }
+
+  .cert-img {
+    height: 160px;
+  }
 }
 
 /* Mobile Navigation */
@@ -1244,9 +1248,9 @@ button {
   }
   
   .hero-inner {
-    flex-direction: column;
+    flex-direction: column-reverse; /* photo on top, text below */
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
   .hero-text {
@@ -1274,8 +1278,8 @@ button {
   }
   
   .photo-wrap {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -1325,6 +1329,14 @@ button {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .timeline-wide {
+    padding-left: 1.25rem;
+  }
+
+  .tl-img {
+    height: 180px;
+  }
 }
 
 /* Contact Section Mobile */
@@ -1350,9 +1362,11 @@ button {
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
-  
-  .container {
-    padding: 0 1rem;
+
+  /* Remove extra horizontal padding on container inside sections
+     already padded, to avoid double-padding on narrow screens */
+  .section .container {
+    padding: 0;
   }
 }
 
